@@ -1,11 +1,37 @@
 
-#UNFINISHED
 dijkstra <- function(graph, init_node){
 
-  dist <- graph$w
-  source_idx <- which((graph$v1 == init_node))
+  stopifnot(is.numeric(graph$v1), is.numeric(graph$v2), is.numeric(graph$w))
+  stopifnot(!anyNA(graph[c("v1", "v2","w")]))
+  stopifnot(length(graph$v1) == length(graph$v2), length(graph$v2) == length(graph$w))
 
-  return(c(1:10))
+  weight <- graph$w
+  cost <- c()
+  queue <- unique(graph$v1)
+
+  for (vertex in queue)
+    cost[vertex] <- Inf
+
+  cost[init_node] <- 0
+
+  while (length(queue) != 0){
+    #get least cost node in queue
+    curr_node <- queue[which.min(cost[queue])]
+
+    for(node_idx in which(graph$v1 == curr_node)){
+
+      destination <- graph$v2[node_idx]
+      new_cost <- weight[node_idx] + cost[curr_node]
+
+      if(cost[destination] > new_cost){
+        cost[destination] <- new_cost
+      }
+    }
+    queue <- queue[!queue %in% curr_node] #remove checked node from queue
+
+  }
+
+  return(cost)
 
 }
 
@@ -16,7 +42,7 @@ wiki_graph <- data.frame(
   w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9)
 
   )
-start <- 3
+start <- 1
 
-dijkstra(wiki_graph, start)
+print(dijkstra(wiki_graph, start))
 
