@@ -6,7 +6,7 @@ Authors@R: c(
     person(
       "Alfred", "Rosberg",
       email = "alfro937@student.liu.se",
-      role = c("aut", "cre")
+      role = c("aut")
     ),
     person(
       "Kandes", "Ghebregziabiher",
@@ -18,3 +18,4 @@ Description: This is a package that contains two functions euclidean and dijkstr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Config/roxygen2/version: 8.1.0
