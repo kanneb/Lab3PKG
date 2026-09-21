@@ -15,10 +15,11 @@
 #'@export
 dijkstra <- function(graph, init_node){
 
+
   stopifnot(is.numeric(graph$v1), is.numeric(graph$v2), is.numeric(graph$w))
   stopifnot(!anyNA(graph[c("v1", "v2","w")]))
   stopifnot(length(graph$v1) == length(graph$v2), length(graph$v2) == length(graph$w))
-  stopifnot(is.numeric(init_node), length(init_node) == 1, init_node %in% queue)
+  stopifnot(is.numeric(init_node), length(init_node) == 1, init_node %in% graph$v1)
 
   weight <- graph$w
   cost <- c()
