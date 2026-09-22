@@ -1,11 +1,3 @@
-#' GCD value between to values
-#'
-#'
-#'
-#'
-#'
-#'
-
 
 euclidean <- function(a,b) {
   stopifnot(is.numeric(a), is.numeric(b))

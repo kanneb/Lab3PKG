@@ -1,8 +1,10 @@
 #'Dijkstra's algorithm
 #'
 #'
-#' This is a description
-#'
+#' Algorithm used to find the shortest path from a starting node to every
+#' other node in a weighted graph. It repeatedly picks the unvisited node with
+#' the lowest cost and updates the cost of its neighbours until all nodes have
+#' been visited.
 #'
 #'
 #'@param graph A \code{data.frame} which includes 3 columns, \code{v1} \code{v2}
@@ -11,7 +13,7 @@
 #'
 #'@param init_node The node where the search starts from
 #'@return The cost to each node from the start node
-#'@references https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm
+#'@references \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 #'@export
 dijkstra <- function(graph, init_node){
 
