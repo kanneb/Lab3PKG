@@ -16,7 +16,10 @@
 #' euclidean(101, 10612)
 
 euclidean <- function(a,b) {
-  stopifnot(is.numeric(a), is.numeric(b))
+  stopifnot(
+    is.numeric(a) && length(a) == 1,
+    is.numeric(b) && length(b) == 1
+    )
 
   while (b != 0) {
      rem <- a %% b
