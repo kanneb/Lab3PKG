@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+#' Euclidian algorithm
+#'
 #' Function that computes GCD value between two numeric values
 #'
 #' @param a numeric value
@@ -7,17 +7,13 @@
 #'
 #' @return A GCD value thats numeric
 #'
+#' @references https://en.wikipedia.org/wiki/Euclidean
+#'
 #' @export
 #'
 #' @examples
 #' euclidean(123612, 13892347912)
 #' euclidean(101, 10612)
-#'
-#'
-#'
-#'
-
->>>>>>> euclidian
 
 euclidean <- function(a,b) {
   stopifnot(is.numeric(a), is.numeric(b))
