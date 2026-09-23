@@ -1,6 +1,15 @@
-#' GCD value between to values
+#' Function that computes GCD value between two numeric values
 #'
+#' @param a numeric value
+#' @param b numeric value
 #'
+#' @return A GCD value thats numeric
+#'
+#' @export
+#'
+#' @examples
+#' euclidean(123612, 13892347912)
+#' euclidean(101, 10612)
 #'
 #'
 #'
@@ -18,6 +27,3 @@ euclidean <- function(a,b) {
 
   return(a)
 }
-
-#euclidean(123612, 13892347912)
-#euclidean(100, 1000)
