@@ -1,16 +1,23 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 # Lab3PKG
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/kanneb/Lab3PKG/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kanneb/Lab3PKG/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-R package for Lab 3 in 732A94 Advanced R Programming at Linköping
-University. It implements the Euclidean algorithm and Dijkstra’s
-algorithm, and includes the example graph `wiki_graph`.
+R package for Lab 3 in 732A94 Advanced R Programming at Linköping University. It implements the Euclidean algorithm and Dijkstra's algorithm, and includes the example graph `wiki_graph`.
 
 ## Installation
 
@@ -21,16 +28,12 @@ pak::pak("kanneb/Lab3PKG")
 
 ## Examples
 
-``` r
+```{r}
 library(Lab3PKG)
 
 euclidean(123612, 13892347912)
-#> [1] 4
 euclidean(100, 1000)
-#> [1] 100
 
 dijkstra(wiki_graph, 1)
-#> [1]  0  7  9 20 20 11
 dijkstra(wiki_graph, 3)
-#> [1]  9 10  0 11 11  2
 ```
