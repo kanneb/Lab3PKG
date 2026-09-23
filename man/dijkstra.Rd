@@ -22,6 +22,10 @@ other node in a weighted graph. It repeatedly picks the unvisited node with
 the lowest cost and updates the cost of its neighbours until all nodes have
 been visited.
 }
+\examples{
+dijkstra(wiki_graph, 3)
+dijkstra(wiki_graph, 1)
+}
 \references{
 \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 }

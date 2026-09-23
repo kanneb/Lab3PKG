@@ -14,6 +14,9 @@
 #'@param init_node The node where the search starts from
 #'@return The cost to each node from the start node
 #'@references \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
+#'@examples
+#'dijkstra(wiki_graph, 3)
+#'dijkstra(wiki_graph, 1)
 #'@export
 dijkstra <- function(graph, init_node){
 
